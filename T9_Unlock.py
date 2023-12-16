@@ -4,9 +4,9 @@ import sys
 # provide hash algorithms 
 import hashlib
 
- # display a prompt w/o a newline 
+ # display a prompt without a newline 
 print("Enter your IMEI: ", end=""
-# read a line from standard input & remove the trailing newline
+# read a line from standard input and remove the trailing newline
 IMEI = (
     sys.stdin.readline().strip()
 )
