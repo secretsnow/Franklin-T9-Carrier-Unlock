@@ -1,47 +1,11 @@
 #!/usr/bin/env python
-# provide system functions
-import sys
-# provide hash algorithms 
-import hashlib
+# This is the shebang line that tells the operating system which interpreter to use
+from __future__ import print_function # This enables the print function in Python 2
+import hashlib # This imports the hashlib module for computing hashes
+import sys # This imports the sys module for accessing standard input and output
 
- # display a prompt w/o a newline 
-print("Enter your IMEI: ", end=""
-
-# read a line from standard input
-# and remove the trailing newline
-IMEI = (
-    sys.stdin.readline().strip()
-)
-
-# compute SHA1 hash of the input,
-# then convert it to hexadecimal
-hash = hashlib.sha1(
-    (IMEI + "simlock").encode()
-).hexdigest()
-
-# print first 8 characters
-#!/usr/bin/env python
-# provide system functions
-import sys
-# provide hash algorithms 
-import hashlib
-
- # display a prompt w/o a newline 
-print("Enter your IMEI: ", end=""
-
-# read a line from standard input
-# and remove the trailing newline
-IMEI = (
-sys.stdin.readline().strip()
-)
-
-# compute SHA1 hash of the input,
-# then convert it to hexadecimal
-hash = hashlib.sha1(
-    (IMEI + "simlock").encode()
-).hexdigest()
-
-    # print first 8 chars of hash
-print(hash[:8])
-
-print(hash[:8])
+# Your code goes here
+print("Enter your IMEI: ", end="") # This prints a prompt without a newline
+IMEI = sys.stdin.readline().strip() # This reads a line from standard input and removes the trailing newline
+hash = hashlib.sha1(IMEI + "simlock").hexdigest()[:8] # This computes the SHA1 hash of the IMEI concatenated with "simlock" and takes the first 8 characters
+print(hash, end="") # This prints the hash without a newline
